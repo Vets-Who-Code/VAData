@@ -1,30 +1,24 @@
-README for Veteran Suicide Prediction Model
+# Veteran Suicide Prediction Model
 
-Veteran Suicide Prediction Using TensorFlow & Python
+## 📌 Project Overview
+Veteran suicide is a critical issue, and this project leverages machine learning to analyze historical trends and predict future suicide rates among veterans. Using data from 2001-2022, the model considers year, geographic region, and state to estimate the number of veteran suicides.
 
-This project builds a machine learning model using TensorFlow to predict veteran suicide rates across different states and years based on historical data.
+## 📂 Dataset
+The dataset is sourced from the U.S. Department of Veterans Affairs (VA) and contains:
+- **Year:** 2001-2022
+- **Geographic Region:** (Northeastern, Southern, etc.)
+- **State:** All 50 U.S. states & territories
+- **Number of Veteran Suicides**
 
-📌 Project Overview
+## 🛠️ Tech Stack
+- **Python** 🐍
+- **TensorFlow / Keras** 🤖
+- **Scikit-Learn** 📊
+- **Pandas** 🏷️
+- **Matplotlib** 📈
 
-Veteran suicide is a critical issue, and this project aims to analyze trends and make future predictions based on historical data from 2001-2022. Using machine learning techniques, this model takes into account year, geographic region, and state to estimate the number of veteran suicides.
-
-📂 Dataset
-
-The data comes from an Excel file provided by the VA (Veterans Affairs), which contains:
-	•	Year (2001-2022)
-	•	Geographic Region (Northeastern, Southern, etc.)
-	•	State (All 50 U.S. states & territories)
-	•	Number of Veteran Suicides
-
-🛠️ Tech Stack
-	•	Python 🐍
-	•	TensorFlow / Keras 🤖
-	•	Scikit-Learn 📊
-	•	Pandas 🏷️
-	•	Matplotlib 📈
-
-📑 Project Structure
-
+## 📑 Project Structure
+```
 /VAData
 │── data/
 │   ├── VA_State_Sheets_2001-2022_Appendix_508.xlsx   # Raw dataset
@@ -37,48 +31,52 @@ The data comes from an Excel file provided by the VA (Veterans Affairs), which c
 │   ├── predict.py   # Make predictions
 │── README.md
 │── requirements.txt
+```
 
-🚀 How to Run This Project
-
-1️⃣ Set Up Environment
-
-Clone the repo and install dependencies:
-
+## 🚀 How to Run This Project
+### 1️⃣ Set Up Environment
+Clone the repository and install dependencies:
+```sh
 git clone https://github.com/yourusername/veteran-suicide-prediction.git
 cd veteran-suicide-prediction
 pip install -r requirements.txt
+```
 
-2️⃣ Train the Model
-
+### 2️⃣ Train the Model
 Run the training script to process the dataset and train the TensorFlow model:
-
+```sh
 python src/train_model.py
+```
 
-3️⃣ Make Predictions
-
-After training, you can make predictions:
-
+### 3️⃣ Make Predictions
+After training, make predictions for a specific year and state:
+```sh
 python src/predict.py --year 2025 --state "Texas"
-
-Example Output:
-
+```
+#### Example Output:
+```
 Predicted Veteran Suicides in Texas (2025): 105
+```
 
-📊 Model Performance
-	•	Mean Absolute Error (MAE): 232.97 (Avg error in suicide predictions)
-	•	Mean Squared Error (MSE): 349,559.59 (Measures overall prediction accuracy)
-	•	Training Improvement: Loss decreased over 100 epochs, indicating learning.
+## 📊 Model Performance
+- **Mean Absolute Error (MAE):** 232.97 (Average error in suicide predictions)
+- **Mean Squared Error (MSE):** 349,559.59 (Overall prediction accuracy measure)
+- **Training Improvement:** Loss decreased over 100 epochs, indicating learning.
 
-🔍 Future Improvements
-	•	Add More Features (e.g., GDP, unemployment rates, VA funding per state)
-	•	Tune Model Architecture (test more layers, neurons, optimizers)
-	•	Deploy Model (build a FastAPI endpoint for real-time predictions)
-	•	Integrate a Dashboard (using Streamlit to visualize suicide trends)
+## 🔍 Future Improvements
+- **Feature Expansion:** Incorporate factors like GDP, unemployment rates, and VA funding per state.
+- **Model Optimization:** Experiment with different architectures, layers, and optimizers.
+- **Deployment:** Implement a FastAPI endpoint for real-time predictions.
+- **Dashboard Integration:** Use Streamlit to visualize veteran suicide trends.
 
-📜 License
+## 📜 License
+This project is open-source under the **MIT License**.
 
-This project is open-source under the MIT License.
+## 👥 Contributing
+Contributions are welcome! Open an issue or submit a pull request if you find bugs or have ideas to improve the model.
 
-👥 Contributing
+---
 
-PRs & suggestions are welcome! Open an issue if you find bugs or want to enhance the model.
+### 💡 Acknowledgment
+This project is dedicated to supporting veterans and raising awareness about mental health challenges within the veteran community.
+
